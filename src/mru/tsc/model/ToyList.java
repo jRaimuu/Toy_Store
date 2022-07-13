@@ -249,7 +249,7 @@ public class ToyList extends Toy
 	
 	//Search PRODUCT TYPE
 	/**
-	 * <p>
+	 * 
 	 * Prints out any products found by the search results based on the name of the product
 	 * @param search The type of toy the user is searching for
 	 * @return typeResult An ArrayList of all the toys of the searched Toy type
