@@ -1,0 +1,30 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.root {
+   -fx-background-color: #EEEEEE;
+   -fx-font: 12pt "Helvetica";
+   -fx-font-family: "Helvetica", Arial, sans-serif;
+   }
+
+.Tab{
+	-fx-background-color: #EEEEEE;
+}
+
+.searchToy{
+	-fx-background-color: #EEEEEE;
+}
+
+.addToy{
+	-fx-background-color: #EEEEEE;
+}
+
+.removeToy{
+	-fx-background-color: #EEEEEE;
+}
+
+.error{
+	-fx-background-color: #EEEEEE;
+}
+
+.negPrice{
+	-fx-background-color: #EEEEEE;
+}

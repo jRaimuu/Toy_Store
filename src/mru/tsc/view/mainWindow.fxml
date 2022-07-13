@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mru.tsc.view.MainWindowController">
+   <children>
+      <TabPane prefHeight="800.0" prefWidth="1200.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab id="searchToy" text="Search/Purchase Toy">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="searchToy">
+                     <children>
+                        <Button fx:id="purchaseButton" layoutX="18.0" layoutY="316.0" mnemonicParsing="false" onAction="#purchaseToy" opacity="0.8" prefHeight="39.0" prefWidth="194.0" style="-fx-background-color: #77dd77;" text="BUY" textFill="#fcfcfc">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Button>
+                        <Label alignment="TOP_LEFT" layoutX="20.0" layoutY="24.0" lineSpacing="1.0" prefHeight="42.0" prefWidth="158.0" text="SEARCH/BUY" wrapText="true">
+                           <font>
+                              <Font name="Nirmala UI Bold" size="24.0" />
+                           </font></Label>
+                        <Label layoutX="20.0" layoutY="99.0" opacity="0.8" text="Search Type" textFill="#1c1c1c">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="19.0" layoutY="214.0" opacity="0.8" text="Search Information" textFill="#1c1c1c">
+                           <font>
+                              <Font name="Nirmala UI Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="searchTextBox" layoutX="17.0" layoutY="240.0" prefHeight="30.0" prefWidth="145.0" promptText="Enter Here" style="-fx-background-color: #fcfcfc;">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="searchButton" layoutX="165.0" layoutY="240.0" mnemonicParsing="false" onAction="#searchToy" opacity="0.8" prefHeight="29.0" prefWidth="47.0" style="-fx-background-color: #fcfcfc;" text="FIND" textFill="#1a1a1a80">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="clearButton" layoutX="17.0" layoutY="277.0" mnemonicParsing="false" onAction="#searchClear" opacity="0.8" prefHeight="17.0" prefWidth="196.0" style="-fx-background-color: #fa8072;" text="Clear" textFill="#fcfcfc">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <MenuButton fx:id="searchTypeMenu" layoutX="18.0" layoutY="125.0" mnemonicParsing="false" opacity="0.8" prefHeight="30.0" prefWidth="194.0" style="-fx-background-color: #fcfcfc;" text="Select Search Type" textFill="#1a1a1a80">
+                          <items>
+                            <MenuItem fx:id="menuSearchType" mnemonicParsing="false" onAction="#searchType" text="Toy Type" />
+                            <MenuItem fx:id="menuSearchName" mnemonicParsing="false" onAction="#searchName" text="Toy Name" />
+                              <MenuItem fx:id="menuSearchSN" mnemonicParsing="false" onAction="#searchSN" text="Serial Number" />
+                          </items>
+                           <font>
+                              <Font name="Nirmala UI" size="14.0" />
+                           </font>
+                        </MenuButton>
+                        <ListView fx:id="searchToyResults" layoutX="244.0" layoutY="1.0" prefHeight="758.0" prefWidth="930.0" style="-fx-background-color: #Fcfcfc;">
+                           <effect>
+                              <Blend />
+                           </effect></ListView>
+                        <Line endX="-9.500015258789062" endY="-163.20001220703125" layoutX="254.0" layoutY="243.0" startX="-254.00001525878906" startY="-163.1999969482422" stroke="#d9d9d9" />
+                        <Line endX="-1.52587890625E-5" endY="554.7999877929688" layoutX="245.0" layoutY="203.0" opacity="0.25" startX="-1.52587890625E-5" startY="-202.0" stroke="#cccccc" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab id="addToy" text="Add Toy">
+                 <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="addToy">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fcfcfc66" height="760.0" layoutX="397.0" stroke="#fcfcfc" strokeType="INSIDE" width="805.0" />
+                        <Label layoutX="30.0" layoutY="14.0" text="ADD TOY">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="114.0" opacity="0.8" prefHeight="25.0" prefWidth="221.0" text="Enter New Toy Information:" textAlignment="CENTER" textFill="#1c1c1c">
+                           <font>
+                              <Font name="Nirmala UI Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="163.0" prefHeight="18.0" prefWidth="67.0" text="Category" textAlignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <MenuButton id="catMenBtn" fx:id="categorySelector" layoutX="187.0" layoutY="161.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="171.0" style="-fx-background-color: #fcfcfc;" text="Select a Category">
+                          <items>
+                            <MenuItem fx:id="selectFigure" mnemonicParsing="false" onAction="#selectFigure" text="Figure" />
+                            <MenuItem fx:id="selectPuzzle" mnemonicParsing="false" onAction="#selectPuzzle" text="Puzzle" />
+                              <MenuItem fx:id="sselectAnimal" mnemonicParsing="false" onAction="#selectAnimal" text="Animal" />
+                              <MenuItem fx:id="selectBrdGame" mnemonicParsing="false" onAction="#selectBrdGame" text="Board Game" />
+                          </items>
+                        </MenuButton>
+                        <Label layoutX="14.0" layoutY="220.0" prefHeight="21.0" prefWidth="106.0" text="Serial Number" textAlignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="496.0" prefHeight="21.0" prefWidth="114.0" text="Age-appropriate" textAlignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField id="snField" fx:id="snField" layoutX="189.0" layoutY="218.0" prefHeight="25.0" prefWidth="172.0" style="-fx-background-color: #fcfcfc;" />
+                        <TextField id="nameField" fx:id="nameField" layoutX="189.0" layoutY="276.0" onAction="#namesnField" prefHeight="25.0" prefWidth="172.0" style="-fx-background-color: #fcfcfc;" />
+                        <TextField id="brandField" fx:id="brandField" layoutX="189.0" layoutY="331.0" prefHeight="25.0" prefWidth="172.0" style="-fx-background-color: #fcfcfc;" />
+                        <Label layoutX="14.0" layoutY="386.0" prefHeight="18.0" prefWidth="67.0" text="Price" textAlignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="444.0" prefHeight="21.0" prefWidth="111.0" text="Available-count" textAlignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="333.0" prefHeight="18.0" prefWidth="67.0" text="Brand" textAlignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="278.0" prefHeight="18.0" prefWidth="67.0" text="Name" textAlignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField id="priceField" fx:id="priceField" layoutX="189.0" layoutY="384.0" prefHeight="25.0" prefWidth="172.0" style="-fx-background-color: #fcfcfc;" />
+                        <TextField id="acField" fx:id="availableField" layoutX="189.0" layoutY="442.0" prefHeight="25.0" prefWidth="172.0" style="-fx-background-color: #fcfcfc;" />
+                        <TextField id="aaField" fx:id="ageField" layoutX="189.0" layoutY="494.0" prefHeight="25.0" prefWidth="172.0" style="-fx-background-color: #fcfcfc;" />
+                        <Button id="saveBtn" fx:id="addBtn" layoutX="35.0" layoutY="610.0" mnemonicParsing="false" onAction="#addToy" opacity="0.8" prefHeight="55.0" prefWidth="249.0" style="-fx-background-color: #77dd77;" text="Add Toy" textFill="#fcfcfc">
+                           <font>
+                              <Font name="Nirmala UI" size="24.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="448.0" layoutY="184.0" prefHeight="19.0" prefWidth="92.0" text="Classification" textAlignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="448.0" layoutY="509.0" prefHeight="19.0" prefWidth="92.0" text="Type" textAlignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="821.0" layoutY="184.0" prefHeight="19.0" prefWidth="92.0" text="Material" textAlignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="821.0" layoutY="233.0" prefHeight="19.0" prefWidth="92.0" text="Size" textAlignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField id="classField" fx:id="classificationField" layoutX="568.0" layoutY="182.0" prefHeight="25.0" prefWidth="172.0" />
+                        <TextField id="typeField" fx:id="typeField" layoutX="568.0" layoutY="505.0" prefHeight="25.0" prefWidth="172.0" />
+                        <TextField id="materialField" fx:id="materialField" layoutX="977.0" layoutY="182.0" prefHeight="25.0" prefWidth="172.0" />
+                        <TextField id="sizeField" fx:id="sizeField" layoutX="977.0" layoutY="231.0" prefHeight="25.0" prefWidth="172.0" />
+                        <TextField id="maxField" fx:id="maxField" layoutX="973.0" layoutY="560.0" prefHeight="25.0" prefWidth="172.0" />
+                        <TextField id="minField" fx:id="minField" layoutX="973.0" layoutY="508.0" prefHeight="25.0" prefWidth="172.0" />
+                        <Label layoutX="810.0" layoutY="505.0" prefHeight="32.0" prefWidth="161.0" text="Min. Number of Players" textAlignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="809.0" layoutY="562.0" prefHeight="21.0" prefWidth="164.0" text="Max. Number of Players" textAlignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="898.0" layoutY="615.0" prefHeight="10.0" prefWidth="72.0" text="Designers" textAlignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="448.0" layoutY="109.0" opacity="0.8" prefHeight="32.0" prefWidth="65.0" text="FIGURE" textAlignment="CENTER" textFill="#1c1c1c">
+                           <font>
+                              <Font name="Nirmala UI Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField id="designerField" fx:id="designerField" layoutX="973.0" layoutY="613.0" prefHeight="25.0" prefWidth="172.0" />
+                        <Button id="saveBtn" fx:id="addBtn1" layoutX="291.0" layoutY="610.0" mnemonicParsing="false" onAction="#clearAddFields" opacity="0.8" prefHeight="55.0" prefWidth="66.0" style="-fx-background-color: #fa8072;" text="Clear" textFill="#fcfcfc">
+                           <font>
+                              <Font name="Nirmala UI" size="18.0" />
+                           </font>
+                        </Button>
+                        <Line endX="141.0" endY="-163.20001220703125" layoutX="256.0" layoutY="230.0" startX="-254.00001525878906" startY="-163.1999969482422" stroke="#d9d9d9" />
+                        <Line endX="131.00003051757812" endY="-240.0" layoutX="266.0" layoutY="240.0" startX="131.00003051757812" startY="521.6000366210938" stroke="#d9d9d9" />
+                        <Line endX="131.0" endY="-255.0" layoutX="650.0" layoutY="255.0" startX="131.0" startY="504.20001220703125" stroke="#d9d9d9" />
+                        <Line endX="121.0" endY="111.60000610351562" layoutX="276.0" layoutY="250.0" startX="926.0" startY="111.60000610351562" stroke="#d9d9d9" />
+                        <Label layoutX="821.0" layoutY="109.0" opacity="0.8" prefHeight="32.0" prefWidth="65.0" text="ANIMAL" textAlignment="CENTER" textFill="#1c1c1c">
+                           <font>
+                              <Font name="Nirmala UI Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="448.0" layoutY="450.0" opacity="0.8" prefHeight="32.0" prefWidth="65.0" text="PUZZLE" textAlignment="CENTER" textFill="#1c1c1c">
+                           <font>
+                              <Font name="Nirmala UI Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="809.0" layoutY="445.0" opacity="0.8" prefHeight="32.0" prefWidth="113.0" text="BOARD GAME" textAlignment="CENTER" textFill="#1c1c1c">
+                           <font>
+                              <Font name="Nirmala UI Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab id="removeToy" text="Remove Toy">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="removeToy">
+                     <children>
+                        <Button fx:id="removeSearchButton" layoutX="697.0" layoutY="444.0" mnemonicParsing="false" onAction="#removeSearch" opacity="0.8" prefHeight="30.0" prefWidth="63.0" style="-fx-background-color: fcfcfc;" text="Search" textFill="#1c1c1c">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Button>
+                        <Label layoutX="44.0" layoutY="24.0" text="REMOVE TOY">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font></Label>
+                        <TextField fx:id="removeTextBox" layoutX="439.0" layoutY="444.0" prefHeight="30.0" prefWidth="250.0" promptText="Search Serial Number">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="removeClearButton" layoutX="439.0" layoutY="487.0" mnemonicParsing="false" onAction="#removeClear" opacity="0.8" prefHeight="30.0" prefWidth="321.0" style="-fx-background-color: #fa8072;" text="Clear" textFill="#fcfcfc">
+                           <font>
+                              <Font name="Nirmala UI Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <ListView fx:id="removeToyResults" layoutX="45.0" layoutY="82.0" prefHeight="343.0" prefWidth="1105.0" />
+                        <Button fx:id="removeToyButton" layoutX="438.0" layoutY="562.0" mnemonicParsing="false" onAction="#removeToy" opacity="0.8" prefHeight="84.0" prefWidth="322.0" style="-fx-background-color: #673ab7;" text="Remove Toy" textFill="#fcfcfc">
+                           <font>
+                              <Font name="Nirmala UI Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Line endX="65.60003662109375" endY="-163.20001220703125" layoutX="299.0" layoutY="231.0" startX="-254.00001525878906" startY="-163.1999969482422" stroke="#d9d9d9" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab id="addToy" text="Save and Quit">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="saveAndQuit">
+                     <children>
+                        <Button id="saveBtn" fx:id="sqBtn" layoutX="480.0" layoutY="300.0" mnemonicParsing="false" onAction="#saveData" prefHeight="55.0" prefWidth="239.0" style="-fx-background-color: #673ab7;" text="Save" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                        <Text fill="#1c1c1c" layoutX="435.0" layoutY="266.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="Click to Save Progress">
+                           <font>
+                              <Font name="Nirmala UI Bold" size="32.0" />
+                           </font>
+                        </Text>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
